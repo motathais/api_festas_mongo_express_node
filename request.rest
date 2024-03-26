@@ -1,0 +1,62 @@
+POST http://localhost:3000/api/services
+Content-Type: application/json
+
+{"name": "Algum serviço 2",
+"description": "Alguma descrição",
+"price": 1400,
+"image": "https://hfne.com.br/wp-content/uploads/2018/03/Buffet-spread-760x400-1080x675.png"
+}
+
+###
+GET http://localhost:3000/api/services
+
+###
+GET http://localhost:3000/api/services/6601b87982eee021fb28f601
+
+
+###
+DELETE http://localhost:3000/api/services/6601b87982eee021fb28f601
+
+###
+PUT http://localhost:3000/api/services/6601b3ce7c0230a3965b1be9
+Content-Type: application/json
+
+{"name": "Algum serviço 3",
+"description": "Alguma descrição",
+"price": 1400,
+"image": "https://hfne.com.br/wp-content/uploads/2018/03/Buffet-spread-760x400-1080x675.png"
+
+}
+
+###
+POST http://localhost:3000/api/parties
+Content-Type: application/json
+
+{
+    "title": "Meu evento",
+    "author": "Matheus",
+    "description": "Uma festa de aniversario",
+    "budget": 9000,
+    "image": "https://s2.glbimg.com/pb4GIsQr5tv4Slwkh8dgEmfpSHo=/e.glbimg.com/og/ed/f/original/2019/10/25/cf312-especial-dicas-festa-bee-party-divulgacao.jpg",
+    "services": [
+        {"name" : "Serviço",
+        "description": "Alguma descrição",
+        "price": 1600,
+        "image": "https://hfne.com.br/wp-content/uploads/2018/03/Buffet-spread-760x400-1080x675.png"
+        },
+        {"name" : "Serviço 2",
+        "description": "Alguma descrição",
+        "price": 8000,
+        "image": "https://hfne.com.br/wp-content/uploads/2018/03/Buffet-spread-760x400-1080x675.png"
+        }
+    ]
+}
+
+###
+GET http://localhost:3000/api/parties
+
+###
+GET http://localhost:3000/api/parties/6601d352c72f53f0d6bdcf4b
+
+###
+DELETE  http://localhost:3000/api/parties/6601d352c72f53f0d6bdcf4b
